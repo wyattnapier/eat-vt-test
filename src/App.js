@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {useState} from 'react';
+import { Form, Button } from 'react-bootstrap'
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -20,15 +21,31 @@ function App() {
   }
 
   if (!loggedIn) {
-    // if not logged in
+    // if not logged in call that componenet
     return (
       <div>
         <p>We are not logged in :/</p>
-        <button onClick={handleLogin}>Login</button>
+        {/* <button onClick={handleLogin}>Login</button> */}
+        <Form onSubmit={handleLogin}>
+        <Form.Group>
+          <Form.Label>Username:</Form.Label>
+          <Form.Control
+            type="text"
+            name="username"
+          />
+          <Form.Label>Password:</Form.Label>
+          <Form.Control
+            type="password"
+          />
+          <Button variant="primary" type="submit">
+            login
+          </Button>
+        </Form.Group>
+      </Form>
       </div>
     )
   } else {
-    // if logged in
+    // if logged in call that component
     return (
       <div>
         <p>We are logged in!</p>
