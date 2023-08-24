@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import { main } from './WhisperUtils'; // Update the path
+// import React, { useEffect, useState } from 'react';
+// import { main } from './WhisperUtils'; // Update the path
 
-function WhisperTranscription2() {
-  const [transcription, setTranscription] = useState('');
+// function WhisperTranscription2() {
+//   const [transcription, setTranscription] = useState('');
 
-  useEffect(() => {
-    async function fetchTranscription() {
-      const newTranscription = await main();
-      setTranscription(newTranscription);
-    }
+//   useEffect(() => {
+//     async function fetchTranscription() {
+//       const newTranscription = await main();
+//       setTranscription(newTranscription);
+//     }
 
-    fetchTranscription();
-  }, []);
+//     fetchTranscription();
+//   }, []);
 
-  return (
-    <div>
-      <h1>Whisper Transcription</h1>
-      <p>{transcription}</p>
-      {/* Other UI elements */}
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <h1>Whisper Transcription</h1>
+//       <p>{transcription}</p>
+//       {/* Other UI elements */}
+//     </div>
+//   );
+// }
 
-export default WhisperTranscription2;
+// export default WhisperTranscription2;
