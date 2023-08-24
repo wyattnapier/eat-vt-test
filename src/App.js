@@ -1,7 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+// import WhisperTranscription from './WhisperTranscription';
+// import WhisperTranscription2 from './WhisperTranscription2';
 import {useState} from 'react';
 import { Form, Button } from 'react-bootstrap'
+import WhisperTranscription from './WhisperTranscription';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -49,6 +52,8 @@ function App() {
     return (
       <div>
         <p>We are logged in!</p>
+        {/* <WhisperTranscription />
+        <WhisperTranscription2 /> */}
         <button onClick={handleLogout}>Log out</button>
       </div>
     )
