@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 // import WhisperTranscription from './WhisperTranscription';
 // import WhisperTranscription2 from './WhisperTranscription2';
+import Login from './Login';
 import {useState} from 'react';
 import { Form, Button } from 'react-bootstrap'
 import WhisperTranscription from './WhisperTranscription';
@@ -30,21 +31,22 @@ function App() {
         <p>We are not logged in :/</p>
         {/* <button onClick={handleLogin}>Login</button> */}
         <Form onSubmit={handleLogin}>
-        <Form.Group>
-          <Form.Label>Username:</Form.Label>
-          <Form.Control
-            type="text"
-            name="username"
-          />
-          <Form.Label>Password:</Form.Label>
-          <Form.Control
-            type="password"
-          />
-          <Button variant="primary" type="submit">
-            login
-          </Button>
-        </Form.Group>
-      </Form>
+          <Form.Group>
+            <Form.Label>Username:</Form.Label>
+            <Form.Control
+              type="text"
+              name="username"
+            />
+            <Form.Label>Password:</Form.Label>
+            <Form.Control
+              type="password"
+            />
+            <Button variant="primary" type="submit">
+              login
+            </Button>
+          </Form.Group>
+        </Form>
+        <Login />
       </div>
     )
   } else {
